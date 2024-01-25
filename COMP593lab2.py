@@ -19,23 +19,15 @@ def main():
     
     # TODO: Step 3 - Add another movie to the data structure
     about_me["movies"].append({"title": "Barbie", "genre": "comedy"})
-
-    # Call the print_student_name_and_id function
+    
+    added_toppings = ["ONION", "HAM"]
+    #calling fuctions to main
     print_student_name_and_id(about_me)
-
-    # TODO: Step 5 - Function that adds pizza toppings to data structure
-    toppings_to_add = ["ONION", "HAM"]
-    add_pizza_toppings(about_me, toppings_to_add)
-
-    # Call the print_pizza_toppings function
+    add_pizza_toppings(about_me, added_toppings)
     print_pizza_toppings(about_me)
-
-    # Call the print_movie_genres function
     print_movie_genres(about_me)
-
-    # Call the print_movie_titles function
     print_movie_titles(about_me["movies"])
-
+    
 # TODO: Step 4 - Function that prints student name and ID
 def print_student_name_and_id(about_me):
     full_name = about_me["full_name"]
@@ -49,7 +41,7 @@ def add_pizza_toppings(about_me, toppings):
     for topping in toppings:
         about_me["pizza_toppings"].append(topping)
         about_me["pizza_toppings"].sort()
-        about_me["pizza_toppings"] = [t.lower() for t in about_me["pizza_toppings"]]
+        about_me["pizza_toppings"] = [topping.lower() for topping in about_me["pizza_toppings"]]
     return
 
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
